@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday</title>
+    <meta name="description" content="A special birthday surprise just for you." />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-heart">💖</div>
+            <p class="loader-text">This is special for you</p>
+            <div class="loader-bar">
+                <div class="loader-fill" id="loaderFill"></div>
+            </div>
+            <button class="loader-start" id="loaderStart" type="button" disabled>
+                Open
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== FLOATING PARTICLES ===== -->
+    <div class="particles" id="particles"></div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Happy Birthday</h1>
+            <!-- 🔧 GANTI nama pacar kamu -->
+            <h2 class="hero-name fade-up">Elvita</h2>
+            <p class="hero-desc fade-up">
+                Hari ini, langit tersenyum untukmu.<br />
+                Semoga kelahiranmu selalu menjadi hal yang paling indah dalam hidupmu.
+            </p>
+            <button class="btn-open-letter fade-up" id="btnOpenLetter">
+                Buka Suratku
+            </button>
+        </div>
+        <div class="hero-scroll-hint"><span>↓</span></div>
+    </section>
+
+    <!-- ===== LETTER MODAL ===== -->
+    <div class="modal-overlay" id="letterModal">
+        <div class="modal-card">
+            <button class="modal-close" id="btnCloseModal">✕</button>
+            <div class="letter-header">
+                <span class="letter-seal">💌</span>
+            </div>
+            <div class="letter-body">
+                <!-- 🔧 GANTI isi surat sesuai keinginan kamu -->
+                <p>Deal Elvita,</p>
+                <p>
+                    Di hari yang istimewa ini, aku ingin kamu tahu betapa beruntungnya aku
+                    bisa kembali bersamamu. Terima kasih sudah berbagi kebahagiaan, dan
+                    tetaplah menjadi versi terbaik dari dirimu.
+                </p>
+                <p>
+                    Selamat ulang tahun, cintaku. Semoga semua impianmu terwujud,
+                    semoga kamu selalu sehat dan bahagia. Aku di sini, selalu, untuk
+                    menemanimu di setiap langkahmu.
+                </p>
+                <p class="letter-signature">
+                    Dengan sepenuh hati,<br />
+                    <!-- 🔧 GANTI nama kamu -->
+                    <span>- Bintang</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PHOTOS SECTION ===== -->
+    <section class="photos-section" id="photos">
+        <div class="section-header">
+            <h2 class="section-title">Kenangan Kita</h2>
+        </div>
+
+        <div class="photos-grid">
+            <!--
+              VIDEO CARD: Ganti data-src dengan path video kamu.
+              Video TIDAK akan di-load sampai user scroll ke sana → hemat bandwidth!
+              Format: .mp4 (paling aman), .MOV (Safari), .webm
+            -->
+            <div class="photo-card video-card">
+                <div class="photo-wrapper">
+                    <video class="card-video lazy-video" data-src="path/VIdeo Bertemu Kembali.mp4" muted loop
+                        playsinline preload="none"></video>
+                    <div class="photo-overlay video-badge">
+                        <p>Momen kembali</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-wrapper">
+                    <!-- 🔧 Ganti src dengan path foto kamu -->
+                    <img src="path/Foto Moment Special.JPG" alt="Momen Spesial" loading="lazy"
+                        onerror="this.parentElement.classList.add('photo-placeholder')" />
+                    <div class="photo-overlay">
+                        <p>Momen spesial</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card video-card">
+                <div class="photo-wrapper">
+                    <video class="card-video lazy-video" data-src="path/Video Petualangan Bersama.MOV" muted loop
+                        playsinline preload="none"></video>
+                    <div class="photo-overlay video-badge">
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-wrapper">
+                    <img src="path/Img 4.jpg" alt="Kenangan Bersama" loading="lazy"
+                        onerror="this.parentElement.classList.add('photo-placeholder')" />
+                    <div class="photo-overlay">
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card video-card">
+                <div class="photo-wrapper">
+                    <video class="card-video lazy-video" data-src="path/Video Motoran Bersama.MOV" muted loop
+                        playsinline preload="none"></video>
+                    <div class="photo-overlay video-badge">
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <div class="photo-wrapper">
+                    <img src="path/Foto Petualangan.JPG" alt="Petualangan" loading="lazy"
+                        onerror="this.parentElement.classList.add('photo-placeholder')" />
+                    <div class="photo-overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WISHES SECTION ===== -->
+    <section class="wishes-section" id="wishes">
+        <div class="section-header">
+            <h2 class="section-title">Doa & Harapan</h2>
+        </div>
+        <div class="wishes-grid">
+            <div class="wish-card" data-delay="0">
+                <div class="wish-icon">💖</div>
+                <h3>Bahagia Selalu</h3>
+                <p>Semoga setiap harimu dipenuhi dengan kebahagiaan yang tulus dan senyum yang merekah.</p>
+            </div>
+            <div class="wish-card" data-delay="100">
+                <div class="wish-icon">🌟</div>
+                <h3>Raih Impianmu</h3>
+                <p>Semoga semua cita-cita dan impianmu terwujud satu per satu dengan indah.</p>
+            </div>
+            <div class="wish-card" data-delay="200">
+                <div class="wish-icon">🌸</div>
+                <h3>Sehat Selalu</h3>
+                <p>Semoga tubuhmu selalu sehat dan kuat agar bisa menikmati setiap momen indah kehidupan.</p>
+            </div>
+            <div class="wish-card" data-delay="300">
+                <div class="wish-icon">✨</div>
+                <h3>Dilimpahkan Berkah</h3>
+                <p>Semoga pintu rezeki dan keberuntungan selalu terbuka lebar untukmu.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MUSIC PLAYER ===== -->
+    <div class="music-player" id="musicPlayer" aria-label="Pemutar musik">
+        <!--
+          🔧 Ganti src dengan path file audio kamu.
+          Format: .mp3, .ogg, .wav
+        -->
+        <audio id="bgAudio" loop preload="auto">
+            <source src="audio/Kita Lewati Berdua - Overnight.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div class="player-info">
+            <div class="player-disc" id="playerDisc">🎵</div>
+            <div class="player-meta">
+                <!-- 🔧 GANTI nama lagu dan artis -->
+                <span class="player-song">Kita Lewati Berdua</span>
+                <span class="player-artist">Overnight</span>
+                <span class="player-status" id="playerStatus" aria-live="polite">Menunggu loading selesai…</span>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="player-btn" id="btnPlayPause" type="button" title="Putar musik" aria-label="Putar musik">▶</button>
+            <div class="volume-control">
+                <span class="volume-icon" aria-hidden="true">🔊</span>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.5"
+                    aria-label="Volume musik" />
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CAKE SECTION ===== -->
+    <section class="cake-section" id="cake">
+        <div class="cake-container">
+            <div class="cake-visual">
+                <div class="cake-top">
+                    <div class="candles">
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cake-layer layer-1"></div>
+                <div class="cake-layer layer-2"></div>
+                <div class="cake-layer layer-3"></div>
+            </div>
+            <div class="cake-text">
+                <p>Buat suatu permintaan dan semoga hal tersebut bisa terwujud.</p>
+                <button class="btn-blowcandle" id="btnBlow">Tiup Lilin</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>Made with love, especially for you</p>
+        <!-- 🔧 GANTI nama pacar kamu -->
+        <p class="footer-name">Happy Birthday, Elvita 🎉</p>
+    </footer>
+
+    <!-- ===== CONFETTI CANVAS ===== -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
